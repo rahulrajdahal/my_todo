@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_todo/screens/auth/forgot_password.dart';
 import 'package:my_todo/screens/auth/sign_in.dart';
+import 'package:my_todo/screens/auth/verify_forgot_password.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,9 +21,10 @@ class MyApp extends StatelessWidget {
       // home: const HomeScreen(),
       initialRoute: '/',
       routes: {
-        "/": (context) => ForgotPasswordScreen(),
+        "/": (context) => VerifyForgotPasswordScreen(),
         "/sign-in": (context) => SignIn(),
         "/forgot-password": (context) => ForgotPasswordScreen(),
+        "/verify-forgot-password": (context) => VerifyForgotPasswordScreen(),
         "/reset-password": (context) => ForgotPasswordScreen(),
       },
     );
