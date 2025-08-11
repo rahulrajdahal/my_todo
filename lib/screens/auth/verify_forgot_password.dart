@@ -38,8 +38,14 @@ class VerifyForgotPasswordScreen extends StatelessWidget {
               SizedBox(height: getProportionateScreenHeight(48)),
               OtpInput(),
               SizedBox(height: getProportionateScreenHeight(40)),
-              Button(text: "Send Verification Link", onPressed: () {}),
-              SizedBox(height: getProportionateScreenHeight(156)),
+              Button(text: "Verify Code", onPressed: () {}),
+              SizedBox(height: getProportionateScreenHeight(16)),
+              Button(
+                text: "Resend in: 00:17",
+                variant: Variant.text,
+                onPressed: () {},
+              ),
+              SizedBox(height: getProportionateScreenHeight(140)),
               Button(
                 text: "Go Back",
                 variant: Variant.text,
@@ -47,7 +53,7 @@ class VerifyForgotPasswordScreen extends StatelessWidget {
                   Navigator.pop(context);
                 },
               ),
-              SizedBox(height: getProportionateScreenHeight(42)),
+              SizedBox(height: getProportionateScreenHeight(78)),
             ],
           ),
         ),
