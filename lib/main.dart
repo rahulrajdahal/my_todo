@@ -1,13 +1,24 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:injectable/injectable.dart';
+import 'package:my_todo/screens/auth/sign_in.dart';
 
-import 'injection.dart';
-import 'presentation/core/app_widget.dart';
+void main() {
+  runApp(const MyApp());
+}
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  configureInjection(Environment.prod);
-  await Firebase.initializeApp();
-  runApp(AppWidget());
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'My Todo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      // home: const HomeScreen(),
+      initialRoute: '/',
+      routes: {"/": (context) => SignIn(), "/sign-in": (context) => SignIn()},
+    );
+  }
 }
