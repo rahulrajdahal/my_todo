@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_todo/utils/colors.dart';
 import 'package:my_todo/utils/size_config.dart';
+import 'package:my_todo/widgets/outline_button.dart';
 
 enum Variant { fill, outline, text }
 
@@ -8,12 +9,14 @@ class Button extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
   final Variant variant;
+  final Icon? icon;
 
   const Button({
     super.key,
     required this.text,
     required this.onPressed,
     this.variant = Variant.fill,
+    this.icon,
   });
 
   @override
@@ -52,41 +55,7 @@ class Button extends StatelessWidget {
         );
 
       case Variant.outline:
-        return OutlinedButton(
-          style: OutlinedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusGeometry.circular(
-                getProportionateScreenWidth(16),
-              ),
-            ),
-            backgroundColor: Colors.white,
-            side: BorderSide(
-              color: gray[300]!,
-              width: getProportionateScreenWidth(1),
-              style: BorderStyle.solid,
-            ),
-            padding: EdgeInsets.all(18),
-            maximumSize: Size(
-              getProportionateScreenWidth(398),
-              getProportionateScreenHeight(60),
-            ),
-            minimumSize: Size(
-              getProportionateScreenWidth(398),
-              getProportionateScreenHeight(60),
-            ),
-          ),
-          onPressed: onPressed,
-          child: Text(
-            text,
-            style: TextStyle(
-              height: getProportionateScreenHeight(1.2),
-              color: gray[500],
-              fontSize: getProportionateScreenWidth(20),
-              fontWeight: FontWeight.w600,
-              letterSpacing: getProportionateScreenWidth(-0.8),
-            ),
-          ),
-        );
+        return AppOutlineButton(text: text, onPressed: onPressed, icon: icon);
 
       case Variant.text:
         return TextButton(
@@ -94,11 +63,11 @@ class Button extends StatelessWidget {
           child: Text(
             text,
             style: TextStyle(
-              height: getProportionateScreenHeight(1.2),
+              height: getProportionateScreenHeight(1.56),
               color: blue[600],
-              fontSize: getProportionateScreenWidth(20),
+              fontSize: getProportionateScreenWidth(18),
               fontWeight: FontWeight.w600,
-              letterSpacing: getProportionateScreenWidth(-0.8),
+              letterSpacing: getProportionateScreenWidth(-0.72),
             ),
           ),
         );

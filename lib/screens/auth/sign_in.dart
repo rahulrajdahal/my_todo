@@ -40,6 +40,10 @@ class SignIn extends StatelessWidget {
                 text: "Sign In With Google",
                 variant: Variant.outline,
                 onPressed: () {},
+                icon: Icon(
+                  Icons.login,
+                  size: (getProportionateScreenWidth(24)),
+                ),
               ),
               SizedBox(height: getProportionateScreenHeight(20)),
               Button(
