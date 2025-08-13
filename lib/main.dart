@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_todo/screens/auth/account_details.dart';
 import 'package:my_todo/screens/auth/forgot_password.dart';
+import 'package:my_todo/screens/auth/google_login_success.dart';
 import 'package:my_todo/screens/auth/reset_password.dart';
 import 'package:my_todo/screens/auth/reset_password_success.dart';
 import 'package:my_todo/screens/auth/sign_in.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       // home: const HomeScreen(),
       initialRoute: '/',
       routes: {
-        "/": (context) => AccountDetailsScreen(),
+        "/": (context) => GoogleLoginSuccessScreen(),
         "/sign-in": (context) => SignIn(),
         "/forgot-password": (context) => ForgotPasswordScreen(),
         "/verify-forgot-password": (context) => VerifyForgotPasswordScreen(),
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         "/reset-password-success": (context) => ResetPasswordSuccessScreen(),
         "/sign-up": (context) => SignUpScreen(),
         "/account-details": (context) => AccountDetailsScreen(),
+        "/google-login-success": (context) => GoogleLoginSuccessScreen(),
       },
     );
   }

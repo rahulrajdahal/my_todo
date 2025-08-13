@@ -28,9 +28,9 @@ const Map<int, Color> red = {
 };
 const Map<int, Color> blue = {
   50: Color(0xffF8FAFC),
-  100: Color(0xffF0F5F9),
-  200: Color(0xffE1E8F0),
-  300: Color(0xffCAD5E0),
+  100: Color(0xffECF0FC),
+  200: Color(0xffD9E1F9),
+  300: Color(0xffB3C3F3),
   500: Color(0xff596981),
   600: Color(0xff4169E1),
   700: Color(0xff304254),
