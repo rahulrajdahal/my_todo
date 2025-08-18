@@ -10,6 +10,22 @@ class MainFeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        title: Text(
+          "My Todo",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: getProportionateScreenWidth(24),
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        centerTitle: true,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: blue[600],
