@@ -1,8 +1,65 @@
 import 'package:flutter/material.dart';
 import 'package:my_todo/utils/colors.dart';
 import 'package:my_todo/utils/size_config.dart';
+import 'package:my_todo/widgets/button.dart';
 import 'package:my_todo/widgets/recent_completed_todo.dart';
 import 'package:my_todo/widgets/remaining_todo.dart';
+
+Future<void> _addTodoDialog(BuildContext context) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        backgroundColor: Colors.white,
+        title: RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+            text: "Add a ",
+            style: TextStyle(
+              fontSize: getProportionateScreenWidth(20),
+              fontWeight: FontWeight.w300,
+              color: Colors.black,
+            ),
+            children: [
+              TextSpan(
+                text: "New Todo",
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+            ],
+          ),
+        ),
+        content: TextField(
+          maxLines: 3,
+          decoration: InputDecoration(
+            hoverColor: Color(0xfff3f3f3),
+            fillColor: Color(0xfff3f3f3),
+            focusColor: Color(0xfff3f3f3),
+            border: OutlineInputBorder(
+              borderSide: BorderSide(
+                style: BorderStyle.none,
+                color: Color(0xfff3f3f3),
+              ),
+              borderRadius: BorderRadius.circular(
+                getProportionateScreenWidth(19),
+              ),
+            ),
+          ),
+        ),
+        actionsAlignment: MainAxisAlignment.center,
+        actions: [
+          Button(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            text: "Cancel",
+            variant: Variant.text,
+          ),
+          IconButton(onPressed: () {}, icon: Icon(Icons.check)),
+        ],
+      );
+    },
+  );
+}
 
 class MainFeedScreen extends StatelessWidget {
   const MainFeedScreen({super.key});
@@ -27,7 +84,7 @@ class MainFeedScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => _addTodoDialog(context),
         backgroundColor: blue[600],
         elevation: 15,
         shape: RoundedRectangleBorder(
