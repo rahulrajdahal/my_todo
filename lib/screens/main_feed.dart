@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_todo/utils/colors.dart';
 import 'package:my_todo/utils/size_config.dart';
+import 'package:my_todo/widgets/app_navbar.dart';
 import 'package:my_todo/widgets/button.dart';
 import 'package:my_todo/widgets/recent_completed_todo.dart';
 import 'package:my_todo/widgets/remaining_todo.dart';
@@ -31,14 +32,10 @@ Future<void> _addTodoDialog(BuildContext context) {
         content: TextField(
           maxLines: 3,
           decoration: InputDecoration(
-            hoverColor: Color(0xfff3f3f3),
             fillColor: Color(0xfff3f3f3),
-            focusColor: Color(0xfff3f3f3),
+            filled: true,
             border: OutlineInputBorder(
-              borderSide: BorderSide(
-                style: BorderStyle.none,
-                color: Color(0xfff3f3f3),
-              ),
+              borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(
                 getProportionateScreenWidth(19),
               ),
@@ -67,22 +64,7 @@ class MainFeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-        title: Text(
-          "My Todo",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: getProportionateScreenWidth(24),
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
-        ],
-      ),
+      appBar: AppNavbar(),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _addTodoDialog(context),
         backgroundColor: blue[600],

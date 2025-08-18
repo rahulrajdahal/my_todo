@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_todo/screens/about_app.dart';
 import 'package:my_todo/screens/auth/account_details.dart';
 import 'package:my_todo/screens/auth/forgot_password.dart';
 import 'package:my_todo/screens/auth/google_login_success.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       // home: const HomeScreen(),
       initialRoute: '/',
       routes: {
-        "/": (context) => MainFeedScreen(),
+        "/": (context) => AboutAppScreen(),
         "/sign-in": (context) => SignIn(),
         "/forgot-password": (context) => ForgotPasswordScreen(),
         "/verify-forgot-password": (context) => VerifyForgotPasswordScreen(),
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         "/onboarding-plan": (context) => OnboardPlanScreen(),
         "/onboarding-templates": (context) => OnboardTemplatesScreen(),
         "/main-feed": (context) => MainFeedScreen(),
+        "/about": (context) => AboutAppScreen(),
       },
     );
   }
