@@ -3,7 +3,7 @@ import 'package:my_todo/utils/colors.dart';
 import 'package:my_todo/utils/size_config.dart';
 import 'package:my_todo/widgets/app_navbar.dart';
 import 'package:my_todo/widgets/app_switch.dart';
-import 'package:my_todo/widgets/icon_container.dart';
+import 'package:my_todo/widgets/profile_screen_title.dart';
 
 class NotificationSettingsScreen extends StatelessWidget {
   const NotificationSettingsScreen({super.key});
@@ -20,31 +20,12 @@ class NotificationSettingsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                IconContainer(
-                  bgColor: yellow[200],
-                  icon: Icons.notifications_outlined,
-                  color: yellow[600],
-                ),
-                SizedBox(width: getProportionateScreenWidth(12)),
-                RichText(
-                  text: TextSpan(
-                    text: "Notification",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: getProportionateScreenWidth(18),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: "\nSettings",
-                        style: TextStyle(fontWeight: FontWeight.w300),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            ProfileScreenTitle(
+              title1: "Notification",
+              title2: "Settings",
+              icon: Icons.notifications_outlined,
+              iconBgColor: yellow[200],
+              iconColor: yellow[600],
             ),
             SizedBox(height: getProportionateScreenHeight(30)),
             AppSwitch(text: "Push Notifications"),

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:my_todo/utils/colors.dart';
 import 'package:my_todo/utils/size_config.dart';
 import 'package:my_todo/widgets/app_navbar.dart';
-import 'package:my_todo/widgets/icon_container.dart';
+import 'package:my_todo/widgets/profile_screen_title.dart';
 
 class HelpCenterScreen extends StatelessWidget {
   const HelpCenterScreen({super.key});
@@ -21,31 +21,12 @@ class HelpCenterScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                IconContainer(
-                  bgColor: red[200],
-                  icon: Icons.help_center_outlined,
-                  color: red[600],
-                ),
-                SizedBox(width: getProportionateScreenWidth(12)),
-                RichText(
-                  text: TextSpan(
-                    text: "Help",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: getProportionateScreenWidth(18),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: "\nCenter",
-                        style: TextStyle(fontWeight: FontWeight.w300),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            ProfileScreenTitle(
+              title1: "Help",
+              title2: "Center",
+              icon: Icons.help_center_outlined,
+              iconBgColor: red[200],
+              iconColor: red[600],
             ),
             SizedBox(height: getProportionateScreenHeight(40)),
             Transform.rotate(
