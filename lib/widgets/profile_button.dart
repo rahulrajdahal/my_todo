@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_todo/utils/size_config.dart';
+import 'package:my_todo/widgets/icon_container.dart';
 
 class ProfileButton extends StatelessWidget {
   final Color? iconColor;
@@ -32,21 +33,7 @@ class ProfileButton extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                alignment: Alignment.center,
-                padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-                decoration: BoxDecoration(
-                  color: iconBgColor,
-                  borderRadius: BorderRadius.circular(
-                    getProportionateScreenWidth(18),
-                  ),
-                ),
-                child: Icon(
-                  icon,
-                  color: iconColor,
-                  size: getProportionateScreenWidth(18),
-                ),
-              ),
+              IconContainer(bgColor: iconBgColor, icon: icon, color: iconColor),
               SizedBox(width: getProportionateScreenWidth(12)),
               Text(
                 text,

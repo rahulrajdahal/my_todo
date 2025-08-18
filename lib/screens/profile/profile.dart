@@ -97,7 +97,9 @@ class ProfileScreen extends StatelessWidget {
                       iconColor: yellow[600],
                       icon: Icons.notifications_outlined,
                       text: "Notification Settings",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/notification-settings');
+                      },
                     ),
                     SizedBox(height: getProportionateScreenHeight(24)),
                     ProfileButton(
@@ -105,7 +107,9 @@ class ProfileScreen extends StatelessWidget {
                       iconColor: red[600],
                       icon: Icons.help_center_outlined,
                       text: "Help Center",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/help-center');
+                      },
                     ),
                   ],
                 ),
