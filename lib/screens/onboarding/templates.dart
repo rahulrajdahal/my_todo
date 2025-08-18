@@ -21,7 +21,7 @@ class OnboardTemplatesScreen extends StatelessWidget {
               AuthTitle(title: "Select Templates"),
               AuthBody(
                 body:
-                    "Select premade templates made by us so that you can supercharge your setup.",
+                    "Select pre-made templates made by us so that you can supercharge your setup.",
               ),
               SizedBox(height: getProportionateScreenHeight(32)),
               SizedBox(

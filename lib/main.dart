@@ -7,6 +7,7 @@ import 'package:my_todo/screens/auth/reset_password_success.dart';
 import 'package:my_todo/screens/auth/sign_in.dart';
 import 'package:my_todo/screens/auth/sign_up.dart';
 import 'package:my_todo/screens/auth/verify_forgot_password.dart';
+import 'package:my_todo/screens/main_feed.dart';
 import 'package:my_todo/screens/onboarding/plan.dart';
 import 'package:my_todo/screens/onboarding/templates.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       // home: const HomeScreen(),
       initialRoute: '/',
       routes: {
-        "/": (context) => OnboardTemplatesScreen(),
+        "/": (context) => MainFeedScreen(),
         "/sign-in": (context) => SignIn(),
         "/forgot-password": (context) => ForgotPasswordScreen(),
         "/verify-forgot-password": (context) => VerifyForgotPasswordScreen(),
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         "/google-login-success": (context) => GoogleLoginSuccessScreen(),
         "/onboarding-plan": (context) => OnboardPlanScreen(),
         "/onboarding-templates": (context) => OnboardTemplatesScreen(),
+        "/main-feed": (context) => MainFeedScreen(),
       },
     );
   }
