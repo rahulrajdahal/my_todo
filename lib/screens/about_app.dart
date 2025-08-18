@@ -9,7 +9,7 @@ class AboutAppScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppNavbar(),
+      appBar: AppNavbar(title: "About App"),
       body: SingleChildScrollView(
         child: Center(
           child: Padding(

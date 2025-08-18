@@ -12,7 +12,7 @@ class HelpCenterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppNavbar(),
+      appBar: AppNavbar(isBack: true, title: "Settings"),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
           horizontal: getProportionateScreenWidth(24),

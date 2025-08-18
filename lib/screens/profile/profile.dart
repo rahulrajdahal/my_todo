@@ -10,7 +10,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppNavbar(),
+      appBar: AppNavbar(title: "Your Profile"),
       body: Scaffold(
         backgroundColor: Color(0xfff3f3f3),
         body: SingleChildScrollView(
