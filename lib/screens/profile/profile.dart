@@ -113,6 +113,68 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: getProportionateScreenHeight(60)),
+                Container(
+                  padding: EdgeInsets.fromLTRB(
+                    getProportionateScreenWidth(32),
+                    getProportionateScreenHeight(27),
+                    getProportionateScreenWidth(30),
+                    getProportionateScreenHeight(26),
+                  ),
+                  decoration: BoxDecoration(
+                    color: green[200],
+                    borderRadius: BorderRadius.circular(
+                      getProportionateScreenWidth(18),
+                    ),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.account_balance_wallet_rounded,
+                        color: green[600],
+                        size: getProportionateScreenWidth(37),
+                      ),
+                      SizedBox(width: getProportionateScreenWidth(19)),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                              text: "Support ",
+                              style: TextStyle(
+                                fontSize: getProportionateScreenWidth(20),
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xff333333),
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: "the app",
+                                  style: TextStyle(fontWeight: FontWeight.w300),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: getProportionateScreenHeight(8)),
+                          ConstrainedBox(
+                            constraints: BoxConstraints(
+                              maxWidth: getProportionateScreenWidth(209),
+                            ),
+                            child: Text(
+                              "Want to help out the developers of this app? Feel free to contact us and lets talk!",
+                              style: TextStyle(
+                                fontSize: getProportionateScreenWidth(14),
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff727272),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

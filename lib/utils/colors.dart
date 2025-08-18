@@ -51,7 +51,7 @@ const Map<int, Color> blue = {
 const Map<int, Color> green = {
   50: Color(0xffF8FAFC),
   100: Color(0xffECF0FC),
-  200: Color(0xffD9E1F9),
+  200: Color.fromRGBO(52, 168, 83, 0.2),
   300: Color(0xffB3C3F3),
   500: Color(0x34a85333),
   600: Color(0xff34A853),

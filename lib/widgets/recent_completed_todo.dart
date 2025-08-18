@@ -16,7 +16,7 @@ class RecentCompletedTodo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: green[500],
+        color: green[200],
         borderRadius: BorderRadius.circular(getProportionateScreenWidth(16)),
       ),
       padding: EdgeInsets.symmetric(
