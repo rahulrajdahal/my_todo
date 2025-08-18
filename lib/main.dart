@@ -11,6 +11,7 @@ import 'package:my_todo/screens/auth/verify_forgot_password.dart';
 import 'package:my_todo/screens/main_feed.dart';
 import 'package:my_todo/screens/onboarding/plan.dart';
 import 'package:my_todo/screens/onboarding/templates.dart';
+import 'package:my_todo/screens/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       // home: const HomeScreen(),
       initialRoute: '/',
       routes: {
-        "/": (context) => AboutAppScreen(),
+        "/": (context) => ProfileScreen(),
         "/sign-in": (context) => SignIn(),
         "/forgot-password": (context) => ForgotPasswordScreen(),
         "/verify-forgot-password": (context) => VerifyForgotPasswordScreen(),
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         "/onboarding-templates": (context) => OnboardTemplatesScreen(),
         "/main-feed": (context) => MainFeedScreen(),
         "/about": (context) => AboutAppScreen(),
+        "/profile": (context) => ProfileScreen(),
       },
     );
   }
