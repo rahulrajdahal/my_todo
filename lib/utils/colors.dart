@@ -31,7 +31,7 @@ const Map<int, Color> blue = {
   100: Color(0xffECF0FC),
   200: Color(0xffD9E1F9),
   300: Color(0xffB3C3F3),
-  500: Color(0xff596981),
+  500: Color(0xff4285F4),
   600: Color(0xff4169E1),
   700: Color(0xff304254),
   800: Color(0xff1C2A3A),

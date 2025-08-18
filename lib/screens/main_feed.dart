@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_todo/utils/colors.dart';
 import 'package:my_todo/utils/size_config.dart';
 import 'package:my_todo/widgets/recent_completed_todo.dart';
 import 'package:my_todo/widgets/remaining_todo.dart';
@@ -9,6 +10,15 @@ class MainFeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: blue[600],
+        elevation: 15,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(getProportionateScreenWidth(21)),
+        ),
+        child: Icon(Icons.add, color: Colors.white),
+      ),
       backgroundColor: Color(0xfff3f3f3),
       body: SingleChildScrollView(
         child: Padding(
